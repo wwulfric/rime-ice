@@ -1,0 +1,15 @@
+patch:
+  menu/page_size: 8
+  key_binder/bindings:
+    # Tab / Shift+Tab 切换光标至下/上一个拼音
+    - { when: composing, accept: Shift+Tab, send: Shift+Left }
+    - { when: composing, accept: Tab, send: Shift+Right }
+    # Option/Alt + ←/→ 切换光标至下/上一个拼音
+    - { when: composing, accept: Alt+Left, send: Shift+Left }
+    - { when: composing, accept: Alt+Right, send: Shift+Right }
+    # Option/Alt + f/b 切换光标至下/上一个拼音
+    - { when: composing, accept: Alt+b, send: Shift+Left }
+    - { when: composing, accept: Alt+f, send: Shift+Right }
+    # 翻页 , .
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }

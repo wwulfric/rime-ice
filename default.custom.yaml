@@ -1,5 +1,5 @@
 patch:
-  menu/page_size: 8
+  menu/page_size: 5
   key_binder/bindings:
     # Tab / Shift+Tab 切换光标至下/上一个拼音
     - { when: composing, accept: Shift+Tab, send: Shift+Left }
@@ -13,3 +13,4 @@ patch:
     # 翻页 , .
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
+

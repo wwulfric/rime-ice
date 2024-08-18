@@ -15,3 +15,5 @@ patch:
     - name: full_shape
       reset: 0
       states: ["半角", "全角"]  
+
+  

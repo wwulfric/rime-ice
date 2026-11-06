@@ -44,8 +44,11 @@ var (
 	汉字拼音映射TXT = filepath.Join(RimeDir, "others/script/rime/汉字拼音映射.txt")
 )
 
-// 获取 macOS Rime 配置目录
+// RIME_DIR 可指定待维护的配置副本；默认仍使用 macOS Rime 目录。
 func getRimeDir() string {
+	if directory := os.Getenv("RIME_DIR"); directory != "" {
+		return filepath.Clean(directory)
+	}
 	u, err := user.Current()
 	if err != nil {
 		log.Fatalln(err)
